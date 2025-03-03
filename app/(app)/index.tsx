@@ -1,5 +1,6 @@
 import { Text, View } from "react-native";
 
+// Home screen once authenticated
 export default function Index() {
   return (
     <View
@@ -9,7 +10,7 @@ export default function Index() {
         alignItems: "center",
       }}
     >
-      <Text>Edit app/index.tsx to edit this screen.</Text>
+      <Text>Home Screen After Auth</Text>
     </View>
   );
 }
