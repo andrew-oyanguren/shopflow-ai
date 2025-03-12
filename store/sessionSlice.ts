@@ -1,14 +1,35 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice } from '@reduxjs/toolkit';
 
-const initialState = {};
+type User = {
+  id: string;
+  email: string;
+  displayName: string;
+  photoURL: string;
+};
+
+type SessionState = {
+  user: User | null;
+  isAuthentcated: boolean;
+  isLoading: boolean;
+  error: string | null;
+};
+
+const initialState: SessionState = {
+  user: null,
+  isAuthentcated: false,
+  isLoading: false,
+  error: null,
+};
 
 const sessionSlice = createSlice({
-  name: "session",
+  name: 'session',
   initialState,
-  reducers: {},
+  reducers: {
+    signIn: () => {},
+  },
 });
 
 export default sessionSlice.reducer;
 
 // TODO: Add actions to sessionSlice
-// export const {} = sessionSlice.actions;
+export const { signIn } = sessionSlice.actions;
